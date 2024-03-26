@@ -1,19 +1,94 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(223, 10%, 27%);
+}
+
+.outerBody {
+    display: flex;
+    background-color: white;
+    border: 1px solid rgb(44, 34, 34);
+    border-radius: 20px;
+    height: 400px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  margin: 10px;
+}
+
+.innerBody {
+    max-height: 300px;
+    width: 200px;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;  
-     background-color: hsl(220, 15%, 55%);}
-.outerBody
+    align-items: center
+}
+
+.img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.innerBody.qrCodeImage {
+  max-height: 300px;
+  margin: 10px auto;
+  border: 1px solid black; /* Added border style */
+}
+
+.button {
+  color: navy; /* Changed text color to navy */
+  background-color: rgb(169, 165, 165); /* Changed background color */
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+.search {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.search::placeholder {
+  color: #999;
+}
+.button {
+  color: white;
+  background-color: navy;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #001f4d;
+}
+
+.button:focus {
+  outline: none;/
+}
+.attribution
 {
-    display:flex;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 20px;
-    height:400px;
-    width:200px;
-    align-items: center;
-    justify-content: center;
+margin: 10px;;
+color: wheat;
 }
