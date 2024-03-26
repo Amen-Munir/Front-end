@@ -12,19 +12,44 @@ html {
 .outerBody {
     display: flex;
     background-color: white;
-    border: 1px solid rgb(44, 34, 34);
+    border: 2px solid black;
     border-radius: 20px;
-    height: 400px;
-    width: 500px;
+    max-width: 100%; /* Adjusts width based on viewport size */
+    margin: 20px; /* Add margin for spacing */
     align-items: center;
     justify-content: center;
     padding: 20px;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
 }
 
 .search {
-  margin: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.button {
+    color: white;
+    background-color: navy;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #001f4d;
+}
+
+.button:focus {
+    outline: none;
 }
 
 .innerBody {
@@ -35,60 +60,20 @@ html {
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
-.img {
-    max-width: 100%; 
+.innerBody img {
+    max-width: 100%;
     max-height: 100%;
 }
 
-.innerBody.qrCodeImage {
-  max-height: 300px;
-  margin: 10px auto;
-  border: 1px solid black; /* Added border style */
-}
+@media screen and (max-width: 768px) {
+    .outerBody {
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
 
-.button {
-  color: navy; /* Changed text color to navy */
-  background-color: rgb(169, 165, 165); /* Changed background color */
-  border-radius: 10px;
-  padding: 5px;
-  margin: 10px;
-}
-.search {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 80%;
-  box-sizing: border-box;
-}
-
-.search::placeholder {
-  color: #999;
-}
-.button {
-  color: white;
-  background-color: navy;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #001f4d;
-}
-
-.button:focus {
-  outline: none;/
-}
-.attribution
-{
-margin: 10px;;
-color: wheat;
+    .search {
+        width: 100%; /* Make input full width on smaller screens */
+    }
 }
